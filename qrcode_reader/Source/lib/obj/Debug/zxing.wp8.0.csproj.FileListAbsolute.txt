@@ -8,3 +8,8 @@ C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Source\Bin\WP8\Debug\zxin
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Source\Bin\WP8\Debug\zxing.wp8.0.pdb
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Source\lib\obj\Debug\zxing.wp8.0.dll
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Source\lib\obj\Debug\zxing.wp8.0.pdb
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\Source\Bin\WP8\Debug\zxing.wp8.0.XML
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\Source\Bin\WP8\Debug\zxing.wp8.0.dll
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\Source\Bin\WP8\Debug\zxing.wp8.0.pdb
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\Source\lib\obj\Debug\zxing.wp8.0.dll
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\Source\lib\obj\Debug\zxing.wp8.0.pdb

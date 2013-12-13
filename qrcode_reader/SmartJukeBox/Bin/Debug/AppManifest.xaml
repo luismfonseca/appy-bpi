@@ -2,5 +2,7 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="SmartJukeBox" Source="SmartJukeBox.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="NavigationServiceExtensions" Source="NavigationServiceExtensions.dll" />
+    <AssemblyPart x:Name="zxing.wp8.0" Source="zxing.wp8.0.dll" />
   </Deployment.Parts>
 </Deployment>
