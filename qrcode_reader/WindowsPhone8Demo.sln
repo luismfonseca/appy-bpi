@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zxing.wp8.0", "Source\lib\zxing.wp8.0.csproj", "{B90C2C94-B895-4C7F-BD20-32135AE5D49B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{5D107164-A3D8-44DB-B4DD-34F1C39D2C56}"
@@ -8,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhone8Demo", "Clients\WindowsPhone8Demo\WindowsPhone8Demo.csproj", "{BA46155F-1B44-4DE5-A625-BB351D14AD91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartJukeBox", "SmartJukeBox\SmartJukeBox.csproj", "{E8FA64EF-22A9-4A05-9065-0C0FF0008773}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Navigation", "NavigationServiceExtensions\Navigation.csproj", "{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,6 +110,27 @@ Global
 		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|x86.ActiveCfg = Release|x86
 		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|x86.Build.0 = Release|x86
 		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|x86.Deploy.0 = Release|x86
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Debug|ARM.Build.0 = Debug|ARM
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Debug|x86.ActiveCfg = Debug|x86
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Debug|x86.Build.0 = Debug|x86
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release with Documentation|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release with Documentation|Any CPU.Build.0 = Release|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release with Documentation|ARM.ActiveCfg = Release|ARM
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release with Documentation|ARM.Build.0 = Release|ARM
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release with Documentation|x64.ActiveCfg = Release|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release with Documentation|x86.ActiveCfg = Release|x86
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release with Documentation|x86.Build.0 = Release|x86
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release|ARM.ActiveCfg = Release|ARM
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release|ARM.Build.0 = Release|ARM
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release|x64.ActiveCfg = Release|Any CPU
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release|x86.ActiveCfg = Release|x86
+		{1E6DA5A4-0D3E-4E2D-ABEF-7D46EECCD478}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
