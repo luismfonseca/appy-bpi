@@ -1,0 +1,5 @@
+C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Source\Bin\WP8\Debug\zxing.wp8.0.XML
+C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Source\Bin\WP8\Debug\zxing.wp8.0.dll
+C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Source\Bin\WP8\Debug\zxing.wp8.0.pdb
+C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Source\lib\obj\Debug\zxing.wp8.0.dll
+C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Source\lib\obj\Debug\zxing.wp8.0.pdb
