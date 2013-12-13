@@ -1,0 +1,170 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SmartJukeBox.HowToUsePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:SlideTransition Mode="SlideLeftFadeOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:SlideTransition Mode="SlideLeftFadeOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <phone:Pivot
+            x:Name="pHowToUse"
+            Title="HOW TO USE"
+            SelectionChanged="OnPivotSelectionChanged"
+            Grid.Row="0">
+            <phone:PivotItem>
+                <StackPanel
+                    Margin="12 0">
+                    <TextBlock
+                        Style="{StaticResource PhoneTextTitle1Style}"
+                        Margin="0 36"
+                        Text="hello." />
+                    <TextBlock
+                        Margin="0 24"
+                        Style="{StaticResource PhoneTextTitle2Style}"
+                        Text="This is a quick overview of the app main features."
+                        TextWrapping="Wrap"/>
+                    <TextBlock
+                        Style="{StaticResource PhoneTextTitle2Style}"
+                        Margin="0 24"
+                        TextWrapping="Wrap"
+                        Text="Click the next button or flick left to continue..." />
+                </StackPanel>
+            </phone:PivotItem>
+
+            <phone:PivotItem>
+                <StackPanel
+                    Margin="12 0">
+                    <TextBlock
+                        Style="{StaticResource PhoneTextTitle1Style}"
+                        Margin="0 24"
+                        Text="your portfolio" />
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBlock
+                                Style="{StaticResource PhoneTextTitle2Style}"
+                                Margin="0 24 0 0"
+                                TextWrapping="Wrap"
+                                Text="To add something to your portfolio, press search in the main page to find a stock." />
+                            <Image Source="/Assets/mainmenu.png" Width="300" />
+                            <TextBlock
+                                Style="{StaticResource PhoneTextTitle2Style}"
+                                Margin="0 24"
+                                TextWrapping="Wrap"
+                                Text="Then, press add to add your position." />
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </phone:PivotItem>
+            <phone:PivotItem>
+                <StackPanel
+                    Margin="12 0">
+                    <TextBlock
+                        Style="{StaticResource PhoneTextTitle1Style}"
+                        Margin="0 24 0 0"
+                        Text="your portfolio" />
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBlock
+                                Style="{StaticResource PhoneTextTitle2Style}"
+                                Margin="0 24"
+                                TextWrapping="Wrap"
+                                Text="You can check the portfolio details from the main menu, by pressing the portfolio header." />
+                            <Image Source="/Assets/mainmenu2.png" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </phone:PivotItem>
+            <phone:PivotItem>
+                <StackPanel
+                    Margin="12 0">
+                    <TextBlock
+                        Style="{StaticResource PhoneTextTitle1Style}"
+                        Margin="0 24"
+                        Text="your watchlist" />
+                    <ScrollViewer>
+                        <StackPanel>
+                            <TextBlock
+                                Style="{StaticResource PhoneTextTitle2Style}"
+                                Margin="0 24"
+                                TextWrapping="Wrap"
+                                Text="The watchlist represent the stocks you are interested in following." />
+                            <Image Source="/Assets/watchlist.png" Width="300" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
+            </phone:PivotItem>
+            <phone:PivotItem>
+                <StackPanel
+                    Margin="12 0">
+                    <TextBlock
+                        Style="{StaticResource PhoneTextTitle1Style}"
+                        Margin="0 24"
+                        Text="that's it!" />
+                    <ScrollViewer>
+                        <TextBlock
+                            Style="{StaticResource PhoneTextTitle2Style}"
+                            Margin="0 24"
+                            TextWrapping="Wrap"
+                            Text="If you have any questions later on, feel free to email us." />
+                    </ScrollViewer>
+                </StackPanel>
+            </phone:PivotItem>
+        </phone:Pivot>
+        <toolkit:CustomMessageBox
+            Height="84"
+            Grid.Row="1"
+            toolkit:TiltEffect.IsTiltEnabled="True">
+            <StackPanel>
+                <ProgressBar
+                    x:Name="progressBar"
+                    Background="{StaticResource PhoneBackgroundBrush}"
+                    Margin="-24 0"
+                    Value="0"
+                    />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        x:Name="bSkipOrBack"
+                        Grid.Column="0"
+                        Tap="OnSkipTap"
+                        Content="skip" />
+                    <Button
+                        x:Name="bNext"
+                        Grid.Column="1"
+                        Tap="OnNextTap"
+                        Content="next" />
+                </Grid>
+            </StackPanel>
+        </toolkit:CustomMessageBox>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

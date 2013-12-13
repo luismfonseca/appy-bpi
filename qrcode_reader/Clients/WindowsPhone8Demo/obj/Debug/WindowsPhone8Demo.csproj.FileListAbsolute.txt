@@ -17,3 +17,23 @@ C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Clients\WindowsPhone8Demo\ob
 C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.dll
 C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.pdb
 C:\Users\Diogo\Desktop\WP8DemoPatch03 - 84319\trunk\Clients\WindowsPhone8Demo\obj\Debug\XapCacheFile.xml
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\Assets\ApplicationIcon.png
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\Assets\Tiles\FlipCycleTileLarge.png
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\Assets\Tiles\FlipCycleTileMedium.png
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\Assets\Tiles\FlipCycleTileSmall.png
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\Assets\Tiles\IconicTileMediumLarge.png
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\Assets\Tiles\IconicTileSmall.png
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\WindowsPhone8Demo.dll
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\WindowsPhone8Demo.pdb
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\AppManifest.xaml
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\Properties\WMAppManifest.xml
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Build\Debug\Clients\WindowsPhone8Demo\WindowsPhone8Demo_Debug_AnyCPU.xap
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.csprojResolveAssemblyReference.cache
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\App.g.cs
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\MainPage.g.cs
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.g.resources
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.Resources.AppResources.resources
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.csproj.GenerateResource.Cache
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.dll
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\WindowsPhone8Demo.pdb
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\Clients\WindowsPhone8Demo\obj\Debug\XapCacheFile.xml
