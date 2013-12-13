@@ -6,14 +6,14 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace server
+namespace wcfserver
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
-    public interface IRestService
+    public interface IService
     {
-        
-        [WebGet(UriTemplate = "/GetData?value={value}", ResponseFormat = WebMessageFormat.Json)]
+
+        [WebGet(UriTemplate = "/GetData?value={value}", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedResponse)]
         [OperationContract]
         string GetData(string value);
 
@@ -21,6 +21,10 @@ namespace server
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/User", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedResponse)]
+        bool UserRegister(User user);
     }
 
 
