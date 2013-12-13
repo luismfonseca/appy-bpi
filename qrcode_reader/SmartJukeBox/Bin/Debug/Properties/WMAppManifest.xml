@@ -9,9 +9,10 @@
       <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
       <Capability Name="ID_CAP_SENSORS" />
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_ISV_CAMERA" />
     </Capabilities>
     <Tasks>
-      <DefaultTask Name="_default" NavigationPage="ReadQRcode.xaml" />
+      <DefaultTask Name="_default" NavigationPage="ReadQRCode.xaml" />
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="SmartJukeBoxToken" TaskName="_default">
