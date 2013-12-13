@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{5D10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsPhone8Demo", "Clients\WindowsPhone8Demo\WindowsPhone8Demo.csproj", "{BA46155F-1B44-4DE5-A625-BB351D14AD91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartJukeBox", "SmartJukeBox\SmartJukeBox.csproj", "{E8FA64EF-22A9-4A05-9065-0C0FF0008773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,11 +76,42 @@ Global
 		{BA46155F-1B44-4DE5-A625-BB351D14AD91}.Release|x86.ActiveCfg = Release|x86
 		{BA46155F-1B44-4DE5-A625-BB351D14AD91}.Release|x86.Build.0 = Release|x86
 		{BA46155F-1B44-4DE5-A625-BB351D14AD91}.Release|x86.Deploy.0 = Release|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|ARM.Build.0 = Debug|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|ARM.Deploy.0 = Debug|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|x86.ActiveCfg = Debug|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|x86.Build.0 = Debug|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Debug|x86.Deploy.0 = Debug|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|Any CPU.ActiveCfg = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|Any CPU.Build.0 = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|Any CPU.Deploy.0 = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|ARM.ActiveCfg = Release|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|ARM.Build.0 = Release|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|ARM.Deploy.0 = Release|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|x64.ActiveCfg = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|x86.ActiveCfg = Release|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|x86.Build.0 = Release|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release with Documentation|x86.Deploy.0 = Release|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|ARM.ActiveCfg = Release|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|ARM.Build.0 = Release|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|ARM.Deploy.0 = Release|ARM
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|x64.ActiveCfg = Release|Any CPU
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|x86.ActiveCfg = Release|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|x86.Build.0 = Release|x86
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BA46155F-1B44-4DE5-A625-BB351D14AD91} = {5D107164-A3D8-44DB-B4DD-34F1C39D2C56}
+		{E8FA64EF-22A9-4A05-9065-0C0FF0008773} = {5D107164-A3D8-44DB-B4DD-34F1C39D2C56}
 	EndGlobalSection
 EndGlobal
