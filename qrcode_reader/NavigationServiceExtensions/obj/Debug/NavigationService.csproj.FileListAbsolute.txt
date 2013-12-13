@@ -1,0 +1,4 @@
+C:\Users\shuffle\Documents\Visual Studio 2013\Projects\navigationvmbind\DemoApp\NavigationServiceExtensions\Bin\Debug\NavigationServiceExtensions.dll
+C:\Users\shuffle\Documents\Visual Studio 2013\Projects\navigationvmbind\DemoApp\NavigationServiceExtensions\Bin\Debug\NavigationServiceExtensions.pdb
+C:\Users\shuffle\Documents\Visual Studio 2013\Projects\navigationvmbind\DemoApp\NavigationServiceExtensions\obj\Debug\NavigationServiceExtensions.dll
+C:\Users\shuffle\Documents\Visual Studio 2013\Projects\navigationvmbind\DemoApp\NavigationServiceExtensions\obj\Debug\NavigationServiceExtensions.pdb
