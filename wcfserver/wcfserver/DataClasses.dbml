@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Band" Member="Bands">
+    <Type Name="Band">
+      <Column Name="name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="[user]" Member="user" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="User_Band" Member="User1" ThisKey="user" OtherKey="guid" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="guid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="spotEnter" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="spot" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="User_Band" Member="Bands" ThisKey="guid" OtherKey="user" Type="Band" />
+      <Association Name="User_Music" Member="Musics" ThisKey="guid" OtherKey="user" Type="Music" />
+      <Association Name="User_Genre" Member="Genres" ThisKey="guid" OtherKey="user" Type="Genre" />
+      <Association Name="Spot_User" Member="Spot1" ThisKey="spot" OtherKey="guid" Type="Spot" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Spot" Member="Spots">
+    <Type Name="Spot">
+      <Column Name="guid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="gps" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Association Name="Spot_User" Member="Users" ThisKey="guid" OtherKey="spot" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Music" Member="Musics">
+    <Type Name="Music">
+      <Column Name="name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="[user]" Member="user" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="User_Music" Member="User1" ThisKey="user" OtherKey="guid" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Genre" Member="Genres">
+    <Type Name="Genre">
+      <Column Name="name" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="[user]" Member="user" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="User_Genre" Member="User1" ThisKey="user" OtherKey="guid" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
