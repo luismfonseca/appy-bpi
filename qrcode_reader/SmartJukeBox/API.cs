@@ -16,7 +16,8 @@ namespace SmartJukeBox
 
         public enum Actions
         {
-            Register
+            Register,
+            Search
         }
 
         private static Uri getUrlFromAction(Actions action, params string[] parameters)
@@ -25,6 +26,8 @@ namespace SmartJukeBox
             {
                 case Actions.Register:
                     return new Uri(string.Format(BASE_URL + "User"));
+                case Actions.Search:
+                    return new Uri(string.Format("http://ws.spotify.com/search/1/artist.json?q={0}", parameters));
                 default:
                     throw new NotSupportedException("Unkown API.Actions.");
             }

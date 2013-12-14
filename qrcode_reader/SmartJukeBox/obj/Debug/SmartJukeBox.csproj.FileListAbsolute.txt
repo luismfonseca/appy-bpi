@@ -152,3 +152,4 @@ C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\Na
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\SmartJukeBox.csprojResolveAssemblyReference.cache
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\ReadQRcode.g.cs
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Register.g.cs
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Search.g.cs
