@@ -29,13 +29,13 @@ namespace wcfserver
             }
         }
 
-        public static bool Register(User userToAdd)
+        public static string Register(User userToAdd)
         {
             try
             {
                 if (User.Exists(userToAdd.email))
                 {
-                    return false;
+                    return null;
                 }
                 userToAdd.guid = Guid.NewGuid();
                 userToAdd.password = Util.Md5String(userToAdd.password);
@@ -44,12 +44,12 @@ namespace wcfserver
                 {
                     db.Users.InsertOnSubmit(userToAdd);
                     db.SubmitChanges();
-                    return true;
+                    return userToAdd.guid.ToString();
                 }
             }
             catch
             {
-                return false;
+                return null;
             }
         }
 
