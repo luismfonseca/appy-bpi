@@ -33,7 +33,6 @@ namespace SmartJukeBox.JsonTypes
 
     public class ImageResult
     {
-        [DataMember(Name="#text")]
         public string text { get; set; }
 
         public string size { get; set;}

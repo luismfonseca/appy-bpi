@@ -31,13 +31,14 @@ namespace SmartJukeBox
             var result = await API.GetAsync<UserRegisterResponse>(API.Actions.Register, user);
             progressBar.IsIndeterminate = false;
             progressBar.Visibility = Visibility.Collapsed;
-            if (result.UserRegisterResult)
+            if (string.IsNullOrEmpty(result.UserRegisterResult))
             {
-                NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+                MessageBox.Show("An account for the given email address is already created.");
             }
             else
             {
-                MessageBox.Show("An account for the given email address is already created.");
+                Settings.UserID = result.UserRegisterResult;
+                NavigationService.Navigate(new Uri("/Menu.xaml", UriKind.Relative));
             }
         }
 

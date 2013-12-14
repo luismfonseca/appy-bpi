@@ -17,7 +17,8 @@ namespace SmartJukeBox
         public enum Actions
         {
             Register,
-            Search
+            Search,
+            SetSpot
         }
 
         private static Uri getUrlFromAction(Actions action, params string[] parameters)
@@ -28,6 +29,8 @@ namespace SmartJukeBox
                     return new Uri(string.Format(BASE_URL + "User"));
                 case Actions.Search:
                     return new Uri(string.Format("http://ws.audioscrobbler.com/2.0/?method=artist.search&artist={0}&api_key=615e15c4504fd183e1d6d6f3ae40f753&format=json", parameters));
+                case Actions.SetSpot:
+                    return new Uri(string.Format(BASE_URL + "User/{0}/SetSpot/{1}", parameters));
                 default:
                     throw new NotSupportedException("Unkown API.Actions.");
             }
@@ -72,6 +75,7 @@ namespace SmartJukeBox
             using (StreamReader streamRead = new StreamReader(streamResponse, Encoding.UTF8))
             {
                 var responseString = streamRead.ReadToEnd();
+                responseString = responseString.Replace("#text", "text");
 
                 DataContractJsonSerializer dcjs = new DataContractJsonSerializer(typeof(T));
                 return (T)dcjs.ReadObject(getMemoryStream(responseString));

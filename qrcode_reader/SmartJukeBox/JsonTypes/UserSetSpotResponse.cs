@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartJukeBox.JsonTypes
 {
-    public class UserRegisterResponse
+    public class UserSetSpotResponse
     {
-        // UserID
-        public string UserRegisterResult;
+        public bool UserSetSpotResult;
     }
 }
