@@ -107,6 +107,7 @@
     <Compile Include="JsonTypes\UserRegister.cs" />
     <Compile Include="JsonTypes\SearchResponse.cs" />
     <Compile Include="JsonTypes\UserRegisterResponse.cs" />
+    <Compile Include="JsonTypes\UserSetSpotResponse.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="DetailsPage.xaml.cs">
       <DependentUpon>DetailsPage.xaml</DependentUpon>
@@ -132,6 +133,8 @@
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="ViewModels\BandViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>

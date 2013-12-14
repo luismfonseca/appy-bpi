@@ -1,19 +1,4 @@
-﻿/*
- * Copyright 2012 ZXing.Net authors
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +18,7 @@ using ZXing;
 using ZXing.Common;
 using System.Threading;
 using System.Threading.Tasks;
+using SmartJukeBox.JsonTypes;
 
 namespace SmartJukeBox
 {
@@ -169,11 +155,27 @@ namespace SmartJukeBox
             }
         }
 
-        private void DisplayResult(Result result)
+        private async void DisplayResult(Result result)
         {
-            if (result != null)
+            if (result == null)
             {
-                MessageBox.Show(result.Text);
+                return;
+            }
+
+            int spotIdIndex = result.Text.IndexOf("spotid=");
+            string spotId = result.Text.Substring(spotIdIndex + 7, result.Text.Length - spotIdIndex - 7);
+
+            var userSetSpot = await API.GetAsync<UserSetSpotResponse>(API.Actions.SetSpot, new string[] { Settings.UserID, spotId });
+
+            if (userSetSpot.UserSetSpotResult)
+            {
+                App.ViewModel.SpotID = spotId;
+                StopCamera();
+                NavigationService.Navigate(new Uri("/Menu.xaml", UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("It wasn't possible to check in.\nPlease make sure your wifi or mobile data connection is on.");
             }
         }
 

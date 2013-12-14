@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     mc:Ignorable="d"
     d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -14,80 +15,37 @@
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
 
-    <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
 
-        <!-- LOCALIZATION NOTE:
-            To localize the displayed strings copy their values to appropriately named
-            keys in the app's neutral language resource file (AppResources.resx) then
-            replace the hard-coded text value between the attributes' quotation marks
-            with the binding clause whose path points to that string name.
-
-            For example:
-
-                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
-
-            This binding points to the template's string resource named "ApplicationTitle".
-
-            Adding supported languages in the Project Properties tab will create a
-            new resx file per language that can carry the translated values of your
-            UI strings. The binding in these examples will cause the value of the
-            attributes to be drawn from the .resx file that matches the
-            CurrentUICulture of the app at run time.
-         -->
-
-        <!--Panorama control-->
         <phone:Panorama Title="smart jukebox">
             <phone:Panorama.Background>
                 <ImageBrush ImageSource="Images/slider_bg.jpg"/>
             </phone:Panorama.Background>
 
-            <!--Panorama item one-->
-            <phone:PanoramaItem Header="check-in" Visibility="Collapsed">
+            <phone:PanoramaItem Header="check-in">
                 <StackPanel>
                     <TextBlock Margin="12,12,12,12" TextWrapping="Wrap" FontSize="24">
-                    	<Run Text="Currently you are "/>
-                    	<Run FontSize="29.333" Text="not check">
-                    		<Run.Foreground>
-                    			<SolidColorBrush Color="#FFFFC700">
-                    				<SolidColorBrush.RelativeTransform>
-                    					<MatrixTransform Matrix="Identity"/>
-                    				</SolidColorBrush.RelativeTransform>
-                    				<SolidColorBrush.Transform>
-                    					<MatrixTransform Matrix="Identity"/>
-                    				</SolidColorBrush.Transform>
-                    			</SolidColorBrush>
-                    		</Run.Foreground>
-                    	</Run>
-                    	<Run FontSize="29.333" Text="ed">
-                    		<Run.Foreground>
-                    			<SolidColorBrush Color="#FFFFC700">
-                    				<SolidColorBrush.RelativeTransform>
-                    					<MatrixTransform Matrix="Identity"/>
-                    				</SolidColorBrush.RelativeTransform>
-                    				<SolidColorBrush.Transform>
-                    					<MatrixTransform Matrix="Identity"/>
-                    				</SolidColorBrush.Transform>
-                    			</SolidColorBrush>
-                    		</Run.Foreground>
-                    	</Run>
-                    	<Run FontSize="29.333" Text="-in">
-                    		<Run.Foreground>
-                    			<SolidColorBrush Color="#FFFFC700">
-                    				<SolidColorBrush.RelativeTransform>
-                    					<MatrixTransform Matrix="Identity"/>
-                    				</SolidColorBrush.RelativeTransform>
-                    				<SolidColorBrush.Transform>
-                    					<MatrixTransform Matrix="Identity"/>
-                    				</SolidColorBrush.Transform>
-                    			</SolidColorBrush>
-                    		</Run.Foreground>
-                    	</Run>
-                    	<Run FontSize="29.333" Text=" "/>
-                    	<Run Text="in any spot. Tap the button below and share your music taste with everyone."/>
+						<Run Text="Currently you are "/>
+						<Run FontSize="29.333" Text="not checked-in">
+							<Run.Foreground>
+								<SolidColorBrush Color="#FFFFC700">
+									<SolidColorBrush.RelativeTransform>
+										<MatrixTransform Matrix="Identity"/>
+									</SolidColorBrush.RelativeTransform>
+									<SolidColorBrush.Transform>
+										<MatrixTransform Matrix="Identity"/>
+									</SolidColorBrush.Transform>
+								</SolidColorBrush>
+							</Run.Foreground>
+						</Run>
+						<Run FontSize="29.333" Text=" "/>
+						<Run Text="in any spot. Tap the button below and share your music taste with everyone."/>
                     </TextBlock>
                     <StackPanel>
-                        <Border Background="#FFFFC700" Height="200" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="12,24,0,0">
+                        <Border
+                            Tap="OnCheckInTap"
+                            toolkit:TiltEffect.IsTiltEnabled="True"
+                            Background="#FFFFC700" Height="200" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="12,24,0,0">
                             <Image Height="150" VerticalAlignment="Top" HorizontalAlignment="left" Width="150" Source="Images\checkin (1).png" Margin="24,28,0,0"/>
                         </Border>
                     </StackPanel>
@@ -97,63 +55,8 @@
                     </StackPanel>
                 </StackPanel>
             </phone:PanoramaItem>
-            
-            <phone:PanoramaItem Header="spot">
-                <StackPanel Margin="0,-42,0,0">
-                    <TextBlock
-                                Margin="12,0,0,0"
-                                HorizontalAlignment="Left" Height="auto" Grid.Row="1" TextWrapping="Wrap" Text="BPI Appy Day" VerticalAlignment="Top" Width="290" FontSize="48">
-                        <TextBlock.Foreground>
-                            <SolidColorBrush Color="#FFFFC700"/>
-                        </TextBlock.Foreground>
-                    </TextBlock>
-                    <Grid Margin="12,0">
-                        <Rectangle Fill="#6E000000" HorizontalAlignment="Left" Height="183" Margin="0,10,-12,0" Stroke="Black" VerticalAlignment="Top" Width="408"/>
-                        <StackPanel
-                            Margin="0,8,-12,0"
-                            Orientation="Horizontal">
-                            <Image Margin="12,0,0,0"
-                                HorizontalAlignment="Left"
-                                Source="Images/cover.png" Stretch="Fill" Height="150" Width="150"/>
-                            <StackPanel Orientation="Vertical" Width="245">
-                            <TextBlock
-                                Margin="12,12"
-                                HorizontalAlignment="Left" Height="29" Grid.Row="1" TextWrapping="Wrap" Text="Now Playing:" VerticalAlignment="Top" Width="202">
-                                <TextBlock.Foreground>
-                                    <SolidColorBrush Color="#FFFFC700"/>
-                                </TextBlock.Foreground>
-                            </TextBlock>
-                                <TextBlock  Margin="12,0" HorizontalAlignment="Left" Height="37" Grid.Row="1" TextWrapping="Wrap" Text="The Beatles" VerticalAlignment="Top" Width="238" FontSize="29.333"/>
-                                <TextBlock  Margin="12,0" HorizontalAlignment="Left" Height="27" Grid.Row="1" TextWrapping="Wrap" Text="Carry That Weight" VerticalAlignment="Top" Width="238"/>
 
-                                <StackPanel Margin="0,7" Orientation="Horizontal" HorizontalAlignment="Right">
-                                <Grid HorizontalAlignment="Left" Height="54" Grid.Row="1" VerticalAlignment="Top" Width="51">
-                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Opacity="0.99"/>
-                                    <TextBlock
-				        VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center">
-        		        <Run FontSize="32" Text="▲"/>
-                                    </TextBlock>
-                                </Grid>
-                                <Grid HorizontalAlignment="Left" Height="54" Grid.Row="1" VerticalAlignment="Top" Width="51">
-                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Opacity="0.45"/>
-                                    <TextBlock
-				        VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center">
-        		        <Run FontSize="32" Text="▼"/>
-                                    </TextBlock>
-                                </Grid>
-                                </StackPanel>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-
-                    <TextBlock Text="preferences" Margin="12" HorizontalAlignment="Left" Height="45" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontSize="32"/>
-                    
-                </StackPanel>
-            </phone:PanoramaItem>
-
-            <!--Panorama item two-->
             <phone:PanoramaItem>
-                <!--Double line list with image placeholder and text wrapping using a floating header that scrolls with the content-->
                 <phone:LongListSelector Margin="0,-38,-22,2" ItemsSource="{Binding Items}">
                     <phone:LongListSelector.ListHeaderTemplate>
                         <DataTemplate>
@@ -183,22 +86,65 @@
                 </phone:LongListSelector>
             </phone:PanoramaItem>
 
-            <!--Panorama item three-->
             <phone:PanoramaItem Header="my bands" Orientation="Horizontal">
-                <!--Double wide Panorama with large image placeholders-->
-                <Grid Width="451">
+                <ListBox x:Name="lbBands"
+                    ItemsSource="{Binding Bands}" Width="400">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <toolkit:WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="12" Height="173" Width="173">
+                                <Border Background="#FFFFC700">
+                                    <TextBlock Text="+" VerticalAlignment="Top" HorizontalAlignment="center" FontSize="250" Height="273" Margin="0,-110,0,0" Tap="TextBlock_Tap_1"/>
+                                </Border>
+                                <Border>
+                                    <Border.Background>
+                                        <ImageBrush Stretch="UniformToFill" ImageSource="{Binding ImageUrl}"/>
+                                    </Border.Background>
+                                    <Grid  Margin="0,145,0,0">
+                                        <Border Background="Black" Opacity="0.455" />
+                                        <TextBlock Padding="6,0" TextWrapping="Wrap" Text="{Binding Name}" Foreground="White"/>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <!--
                     <StackPanel Margin="0,4,16,0" Orientation="Vertical" VerticalAlignment="Top">
-                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                            <Border Height="173" Width="173" Margin="12,0,0,0">
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Width="234">
+                            <Grid Margin="12,0,0,12" Height="173" Width="173">
+                                <Border Background="#FFFFC700">
+                                    <TextBlock Text="+" VerticalAlignment="Top" HorizontalAlignment="center" FontSize="250" Height="273" Margin="0,-110,0,0" Tap="TextBlock_Tap_1"/>
+                                </Border>
+                                <Border Visibility="{Binding Band1Visibility}">
+                                    <Border.Background>
+                                        <ImageBrush Stretch="UniformToFill" ImageSource="Images/The_Beatles.jpg"/>
+                                    </Border.Background>
+                                    <Grid  Margin="0,145,0,0">
+                                        <Border Background="Black" Opacity="0.455" />
+                                        <TextBlock Padding="6,0" TextWrapping="Wrap" Text="The Beatles" Foreground="White"/>
+                                    </Grid>
+                                </Border>
+                        </Grid>
+                        <Grid Margin="12,0,0,12" Height="173" Width="173">
+                            <Border Background="#FFFFC700">
+                                <TextBlock Text="+" VerticalAlignment="Top" HorizontalAlignment="center" FontSize="250" Height="273" Margin="0,-110,0,0" Tap="TextBlock_Tap_1"/>
+                            </Border>
+                            <Border Visibility="{Binding Band1Visibility}">
                                 <Border.Background>
-                                    <ImageBrush Stretch="UniformToFill" ImageSource="Images/The_Beatles.jpg"/>
+                                    <ImageBrush Stretch="UniformToFill" ImageSource="Images/The+Who.jpg"/>
                                 </Border.Background>
                                 <Grid  Margin="0,145,0,0">
                                     <Border Background="Black" Opacity="0.455" />
                                     <TextBlock Padding="6,0" TextWrapping="Wrap" Text="The Beatles" Foreground="White"/>
                                 </Grid>
                             </Border>
-                            <Border Height="173" Width="173" Margin="12,0,0,0">
+                        </Grid>
+                        <Border Height="173" Width="173" Margin="12,0,0,12">
                                 <Border.Background>
                                     <ImageBrush Stretch="UniformToFill" ImageSource="Images/The+Who.jpg"/>
                                 </Border.Background>
@@ -206,16 +152,10 @@
                                     <Border Background="Black" Opacity="0.495" />
                                     <TextBlock Padding="6,0" TextWrapping="Wrap" Text="The Who" Foreground="White"/>
                                 </Grid>
-                            </Border>
-
-                        </StackPanel>
-                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
-                            <Border  Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0">
-                                <TextBlock Text="+" VerticalAlignment="Top" HorizontalAlignment="center" FontSize="250" Height="273" Margin="1,-110,1,0" Tap="TextBlock_Tap_1"/>
-                            </Border>
-                        </StackPanel>
+                        </Border>
                     </StackPanel>
-                </Grid>
+
+                </StackPanel-->
             </phone:PanoramaItem>
         </phone:Panorama>
 

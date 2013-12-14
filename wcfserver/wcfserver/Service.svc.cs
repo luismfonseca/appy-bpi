@@ -29,18 +29,24 @@ namespace wcfserver
             return composite;
         }
 
-        public bool UserRegister(User user)
+        public string UserRegister(User user)
         {
-            if (User.Register(user))
+            var guid = User.Register(user);
+            if (string.IsNullOrEmpty(guid))
             {
-                WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.Created;
-                return true;
+                //WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.Conflict;
+                return string.Empty;
             }
             else
             {
-                //WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.Conflict;
-                return false;
+                WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.Created;
+                return guid;
             }
+        }
+
+        public bool UserSetSpot(string userGuid, string spotGuid)
+        {
+            return User.SetSpot(userGuid, spotGuid);
         }
     }
 }

@@ -31,7 +31,16 @@ namespace SmartJukeBox
 
         private void TextBlock_Tap_1(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Search.xaml", UriKind.Relative));
+            lbBands.SelectedIndex = -1;
+            if (App.ViewModel.Bands.Count < 5)
+            {
+                NavigationService.Navigate(new Uri("/Search.xaml", UriKind.Relative));
+            }
+        }
+
+        private void OnCheckInTap(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ReadQRCode.xaml", UriKind.Relative));
         }
     }
 }

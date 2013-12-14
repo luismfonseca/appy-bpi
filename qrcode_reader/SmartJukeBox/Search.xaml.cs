@@ -56,7 +56,7 @@ namespace SmartJukeBox
                     searchResponse = searchResponse ?? new SearchSingleResponse();
 
                     llsResults.ItemsSource = new Artist[] { searchResponse.results.artistmatches.artist };
-                }catch
+                } catch
                 {
                     llsResults.ItemsSource = new Artist[0];
                 }
@@ -77,8 +77,11 @@ namespace SmartJukeBox
 
         private void OnResultTap(object sender, System.Windows.Input.GestureEventArgs e)
         {
-            var control = sender as FrameworkElement;
+            var control = (sender as FrameworkElement).DataContext as Artist;
 
+            App.ViewModel.Bands.Insert(App.ViewModel.Bands.Count - 1, new ViewModels.BandViewModel() { Name = control.name, ImageUrl = control.image[2].text });
+
+            NavigationService.GoBack();
             //var yahooSearchResult = ((YahooSearchResult)control.DataContext);
 
             //NavigationService.Navigate(new Uri("/StockInfoPage.xaml?yahooQuote.ShortName=" + yahooSearchResult.symbol, UriKind.Relative));
@@ -86,7 +89,7 @@ namespace SmartJukeBox
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            NavigationService.RemoveBackEntry();
+            //NavigationService.RemoveBackEntry();
         }
     }
 }
