@@ -38,7 +38,7 @@ namespace wcfserver
             }
             else
             {
-                WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.Conflict;
+                //WebOperationContext.Current.OutgoingResponse.StatusCode = HttpStatusCode.Conflict;
                 return false;
             }
         }

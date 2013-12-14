@@ -1,0 +1,86 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="SmartJukeBox.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton
+                IsEnabled="False"
+                Click="OnRegisterTap"
+                IconUri="/Assets/AppBar/check.png"
+                Text="register"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="12,17,0,28">
+            <ProgressBar x:Name="progressBar"
+                Visibility="Collapsed"
+                VerticalAlignment="Top"/>
+            <TextBlock
+                VerticalAlignment="Bottom"
+                Text="REGISTER" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </Grid>
+
+        <Grid x:Name="ContentPanel"
+            Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Grid
+                Grid.Row="0"
+                Margin="12,-6,12,0">
+                <StackPanel>
+                    <TextBlock
+                        Text="Name"
+                        Style="{StaticResource PhoneTextSubtleStyle}" />
+                    <TextBox x:Name="name"
+                        TextChanged="textChanged"
+                        Margin="0,-6,0,12"
+                        InputScope="PersonalFullName"
+                        />
+                    <TextBlock
+                        Text="Email address"
+                        Style="{StaticResource PhoneTextSubtleStyle}" />
+                    <TextBox x:Name="email"
+                        TextChanged="textChanged"
+                        Margin="0,-6,0,12"
+                        InputScope="EmailUserName"
+                        />
+                    <TextBlock
+                        Text="Password"
+                        Style="{StaticResource PhoneTextSubtleStyle}" />
+                    <PasswordBox x:Name="password"
+                        PasswordChanged="passwordChanged"
+                        Margin="0,-6,0,12"
+                        />
+                    <TextBlock
+                        Margin="12,0,0,0"
+                        Text="Your sign-in information will be saved." />
+                    
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

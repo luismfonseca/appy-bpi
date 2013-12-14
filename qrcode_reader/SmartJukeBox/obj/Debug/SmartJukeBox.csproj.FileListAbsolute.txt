@@ -146,3 +146,9 @@ C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debu
 C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
 C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\zxing.wp8.0.dll
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\NavigationServiceExtensions.dll
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\zxing.wp8.0.dll
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\NavigationServiceExtensions.pdb
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\SmartJukeBox.csprojResolveAssemblyReference.cache
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\ReadQRcode.g.cs
+C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Register.g.cs
