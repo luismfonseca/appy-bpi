@@ -43,7 +43,7 @@
             </phone:Panorama.Background>
 
             <!--Panorama item one-->
-            <phone:PanoramaItem Header="check-in">
+            <phone:PanoramaItem Header="check-in" Visibility="Collapsed">
                 <StackPanel>
                     <TextBlock Margin="12,12,12,12" TextWrapping="Wrap" FontSize="24">
                     	<Run Text="Currently you are "/>
@@ -97,6 +97,7 @@
                     </StackPanel>
                 </StackPanel>
             </phone:PanoramaItem>
+            
             <phone:PanoramaItem Header="spot">
                 <StackPanel Margin="0,-42,0,0">
                     <TextBlock
@@ -106,8 +107,8 @@
                             <SolidColorBrush Color="#FFFFC700"/>
                         </TextBlock.Foreground>
                     </TextBlock>
-                    <Grid Margin="12,">
-                        <Rectangle Fill="#6E000000" HorizontalAlignment="Left" Height="183" Margin="0,10,-12,0" Stroke="Black" VerticalAlignment="Top" Width="408" StrokeThickness="0"/>
+                    <Grid Margin="12,0">
+                        <Rectangle Fill="#6E000000" HorizontalAlignment="Left" Height="183" Margin="0,10,-12,0" Stroke="Black" VerticalAlignment="Top" Width="408"/>
                         <StackPanel
                             Margin="0,8,-12,0"
                             Orientation="Horizontal">
@@ -127,14 +128,14 @@
 
                                 <StackPanel Margin="0,7" Orientation="Horizontal" HorizontalAlignment="Right">
                                 <Grid HorizontalAlignment="Left" Height="54" Grid.Row="1" VerticalAlignment="Top" Width="51">
-                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="42" Opacity="0.99"/>
+                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Opacity="0.99"/>
                                     <TextBlock
 				        VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center">
         		        <Run FontSize="32" Text="▲"/>
                                     </TextBlock>
                                 </Grid>
                                 <Grid HorizontalAlignment="Left" Height="54" Grid.Row="1" VerticalAlignment="Top" Width="51">
-                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="42" Opacity="0.45"/>
+                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Opacity="0.45"/>
                                     <TextBlock
 				        VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center">
         		        <Run FontSize="32" Text="▼"/>
@@ -145,10 +146,7 @@
                         </StackPanel>
                     </Grid>
 
-                    <TextBlock Margin="12" HorizontalAlignment="Left" Height="45" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontSize="32">
-        	            <Run Text="p"/>
-        	            <Run Text="references"/>
-                    </TextBlock>
+                    <TextBlock Text="preferences" Margin="12" HorizontalAlignment="Left" Height="45" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontSize="32"/>
                     
                 </StackPanel>
             </phone:PanoramaItem>
