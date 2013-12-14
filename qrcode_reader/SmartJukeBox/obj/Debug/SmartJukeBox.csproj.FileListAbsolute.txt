@@ -153,3 +153,7 @@ C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Sm
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\ReadQRcode.g.cs
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Register.g.cs
 C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Search.g.cs
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\Microsoft.Phone.Controls.dll
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Menu.g.cs
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Register.g.cs
+C:\Users\Diogo\Documents\BpiAppyDay\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\Search.g.cs
