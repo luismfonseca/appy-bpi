@@ -1,4 +1,19 @@
-﻿
+﻿/*
+ * Copyright 2012 ZXing.Net authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +36,7 @@ using System.Threading.Tasks;
 
 namespace SmartJukeBox
 {
-    public partial class ReadQRcode : PhoneApplicationPage
+    public partial class ReadQRCode : PhoneApplicationPage
     {
         private readonly PhotoChooserTask photoChooserTask;
         private readonly BackgroundWorker scannerWorker;
@@ -29,10 +44,8 @@ namespace SmartJukeBox
         private BarcodeCaptureDevice _device;
         private DelayAction _resetTextAction;
 
-        private bool _cameraFlag;
-
         // Konstruktor
-        public ReadQRcode()
+        public ReadQRCode()
         {
             InitializeComponent();
 
@@ -47,14 +60,6 @@ namespace SmartJukeBox
             scannerWorker.DoWork += scannerWorker_DoWork;
             scannerWorker.RunWorkerCompleted += scannerWorker_RunWorkerCompleted;
 
-            foreach (var x in typeof(BarcodeFormat).GetFields())
-            {
-                if (x.IsLiteral)
-                {
-                    BarcodeType.Items.Add(x.GetValue(null));
-                }
-            }
-
             // open the default barcode which should be displayed when the app starts
             var uri = new Uri("/images/35.png", UriKind.Relative);
             var imgSource = new BitmapImage(uri);
@@ -65,19 +70,19 @@ namespace SmartJukeBox
         private void scannerWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // processing the result of the background scanning
-            if (e.Cancelled)
-            {
-                BarcodeContent.Text = "Cancelled.";
-            }
-            else if (e.Error != null)
-            {
-                BarcodeContent.Text = e.Error.Message;
-            }
-            else
-            {
-                var result = (Result)e.Result;
-                DisplayResult(result);
-            }
+            //if (e.Cancelled)
+            //{
+            //    BarcodeContent.Text = "Cancelled.";
+            //}
+            //else if (e.Error != null)
+            //{
+            //    BarcodeContent.Text = e.Error.Message;
+            //}
+            //else
+            //{
+            //    var result = (Result)e.Result;
+            //    DisplayResult(result);
+            //}
         }
 
         private static void scannerWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -98,7 +103,6 @@ namespace SmartJukeBox
         private void OpenImageButton_Click(object sender, RoutedEventArgs e)
         {
             StopCamera();
-            _cameraFlag = false;
             BarcodeImage.Visibility = System.Windows.Visibility.Visible;
             previewRect.Visibility = System.Windows.Visibility.Collapsed;
 
@@ -109,7 +113,6 @@ namespace SmartJukeBox
         {
             BarcodeImage.Visibility = System.Windows.Visibility.Collapsed;
             previewRect.Visibility = System.Windows.Visibility.Visible;
-            _cameraFlag = true;
             await StartCamera();
         }
 
@@ -121,12 +124,13 @@ namespace SmartJukeBox
                 _resetTextAction.Start();
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
-            if (_cameraFlag)
-                StartCamera();
+            BarcodeImage.Visibility = System.Windows.Visibility.Collapsed;
+            previewRect.Visibility = System.Windows.Visibility.Visible;
+            await StartCamera();
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -169,43 +173,37 @@ namespace SmartJukeBox
         {
             if (result != null)
             {
-                BarcodeType.SelectedItem = result.BarcodeFormat;
-                BarcodeContent.Text = result.Text;
-            }
-            else
-            {
-                BarcodeType.SelectedItem = null;
-                BarcodeContent.Text = "No barcode found.";
+                MessageBox.Show(result.Text);
             }
         }
 
-        private void GenerateButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (BarcodeType.SelectedItem == null)
-                return;
+    //    private void GenerateButton_Click(object sender, RoutedEventArgs e)
+    //    {
+    //        if (BarcodeType.SelectedItem == null)
+    //            return;
 
-            IBarcodeWriter writer = new BarcodeWriter
-            {
-                Format = (BarcodeFormat)BarcodeType.SelectedItem,
-                Options = new EncodingOptions
-                {
-                    Height = 480,
-                    Width = 640
-                }
-            };
-            var bmp = writer.Write(BarcodeContent.Text);
-            BarcodeImage.Source = bmp;
-        }
+    //        IBarcodeWriter writer = new BarcodeWriter
+    //        {
+    //            Format = (BarcodeFormat)BarcodeType.SelectedItem,
+    //            Options = new EncodingOptions
+    //            {
+    //                Height = 480,
+    //                Width = 640
+    //            }
+    //        };
+    //        var bmp = writer.Write(BarcodeContent.Text);
+    //        BarcodeImage.Source = bmp;
+    //    }
     }
 
     public class DelayAction : IDisposable
     {
         private static readonly int TickDuration = 100;
-        private Action _action;                     
-        private int _count;                         
-        private bool _busy;                         
-        private object _lock = new object();        
-        private bool _cancelFlag;                   
+        private Action _action;
+        private int _count;
+        private bool _busy;
+        private object _lock = new object();
+        private bool _cancelFlag;
         private double _msDelay;
 
         public event EventHandler Completed;
