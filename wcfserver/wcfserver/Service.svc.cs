@@ -42,5 +42,10 @@ namespace wcfserver
                 return false;
             }
         }
+
+        public bool UserSetSpot(string userGuid, string spotGuid)
+        {
+            return User.SetSpot(userGuid, spotGuid);
+        }
     }
 }

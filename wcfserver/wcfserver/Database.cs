@@ -52,6 +52,30 @@ namespace wcfserver
                 return false;
             }
         }
+
+        public static bool SetSpot(string userGuid, string spotGuid)
+        {
+            using (var db = new DataClassesDataContext(Database.ConnectionString))
+            {
+                var user = db.Users.SingleOrDefault(_ => _.guid == new Guid(userGuid));
+                if (user == null)
+                {
+                    return false;
+                }
+
+                var spot = db.Spots.SingleOrDefault(_ => _.guid == new Guid(spotGuid));
+                if (spot == null)
+                {
+                    return false;
+                }
+
+                user.spot = new Guid(spotGuid);
+                user.spotEnter = DateTime.Now;
+
+                db.SubmitChanges();
+            }
+            return true;
+        }
     }
     #endregion
 }

@@ -25,6 +25,10 @@ namespace wcfserver
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "/User", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedResponse)]
         bool UserRegister(User user);
+
+        [OperationContract]
+        [WebGet(UriTemplate="/User/{userguid}/SetSpot/{spotGuid}", ResponseFormat=WebMessageFormat.Json, BodyStyle=WebMessageBodyStyle.WrappedResponse)]
+        bool UserSetSpot(string userGuid, string spotGuid);
     }
 
 
