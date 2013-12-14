@@ -46,21 +46,45 @@
             <phone:PanoramaItem Header="check-in">
                 <StackPanel>
                     <TextBlock Margin="12,12,12,12" TextWrapping="Wrap" FontSize="24">
-						<Run Text="Currently you are "/>
-						<Run FontSize="29.333" Text="not check-in">
-							<Run.Foreground>
-								<SolidColorBrush Color="#FFFFC700">
-									<SolidColorBrush.RelativeTransform>
-										<MatrixTransform Matrix="Identity"/>
-									</SolidColorBrush.RelativeTransform>
-									<SolidColorBrush.Transform>
-										<MatrixTransform Matrix="Identity"/>
-									</SolidColorBrush.Transform>
-								</SolidColorBrush>
-							</Run.Foreground>
-						</Run>
-						<Run FontSize="29.333" Text=" "/>
-						<Run Text="in any spot. Tap the button bellow and share your music taste with everyone."/>
+                    	<Run Text="Currently you are "/>
+                    	<Run FontSize="29.333" Text="not check">
+                    		<Run.Foreground>
+                    			<SolidColorBrush Color="#FFFFC700">
+                    				<SolidColorBrush.RelativeTransform>
+                    					<MatrixTransform Matrix="Identity"/>
+                    				</SolidColorBrush.RelativeTransform>
+                    				<SolidColorBrush.Transform>
+                    					<MatrixTransform Matrix="Identity"/>
+                    				</SolidColorBrush.Transform>
+                    			</SolidColorBrush>
+                    		</Run.Foreground>
+                    	</Run>
+                    	<Run FontSize="29.333" Text="ed">
+                    		<Run.Foreground>
+                    			<SolidColorBrush Color="#FFFFC700">
+                    				<SolidColorBrush.RelativeTransform>
+                    					<MatrixTransform Matrix="Identity"/>
+                    				</SolidColorBrush.RelativeTransform>
+                    				<SolidColorBrush.Transform>
+                    					<MatrixTransform Matrix="Identity"/>
+                    				</SolidColorBrush.Transform>
+                    			</SolidColorBrush>
+                    		</Run.Foreground>
+                    	</Run>
+                    	<Run FontSize="29.333" Text="-in">
+                    		<Run.Foreground>
+                    			<SolidColorBrush Color="#FFFFC700">
+                    				<SolidColorBrush.RelativeTransform>
+                    					<MatrixTransform Matrix="Identity"/>
+                    				</SolidColorBrush.RelativeTransform>
+                    				<SolidColorBrush.Transform>
+                    					<MatrixTransform Matrix="Identity"/>
+                    				</SolidColorBrush.Transform>
+                    			</SolidColorBrush>
+                    		</Run.Foreground>
+                    	</Run>
+                    	<Run FontSize="29.333" Text=" "/>
+                    	<Run Text="in any spot. Tap the button below and share your music taste with everyone."/>
                     </TextBlock>
                     <StackPanel>
                         <Border Background="#FFFFC700" Height="200" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200" Margin="12,24,0,0">
@@ -72,7 +96,61 @@
                         <TextBlock Text="Café do Zé"  Margin="12,12,0,0" FontSize="24"/>
                     </StackPanel>
                 </StackPanel>
-                <!--Single line list with text wrapping-->
+            </phone:PanoramaItem>
+            <phone:PanoramaItem Header="spot">
+                <StackPanel Margin="0,-42,0,0">
+                    <TextBlock
+                                Margin="12,0,0,0"
+                                HorizontalAlignment="Left" Height="auto" Grid.Row="1" TextWrapping="Wrap" Text="BPI Appy Day" VerticalAlignment="Top" Width="290" FontSize="48">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="#FFFFC700"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <Grid Margin="12,">
+                        <Rectangle Fill="#6E000000" HorizontalAlignment="Left" Height="183" Margin="0,10,-12,0" Stroke="Black" VerticalAlignment="Top" Width="408" StrokeThickness="0"/>
+                        <StackPanel
+                            Margin="0,8,-12,0"
+                            Orientation="Horizontal">
+                            <Image Margin="12,0,0,0"
+                                HorizontalAlignment="Left"
+                                Source="Images/cover.png" Stretch="Fill" Height="150" Width="150"/>
+                            <StackPanel Orientation="Vertical" Width="245">
+                            <TextBlock
+                                Margin="12,12"
+                                HorizontalAlignment="Left" Height="29" Grid.Row="1" TextWrapping="Wrap" Text="Now Playing:" VerticalAlignment="Top" Width="202">
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="#FFFFC700"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                                <TextBlock  Margin="12,0" HorizontalAlignment="Left" Height="37" Grid.Row="1" TextWrapping="Wrap" Text="The Beatles" VerticalAlignment="Top" Width="238" FontSize="29.333"/>
+                                <TextBlock  Margin="12,0" HorizontalAlignment="Left" Height="27" Grid.Row="1" TextWrapping="Wrap" Text="Carry That Weight" VerticalAlignment="Top" Width="238"/>
+
+                                <StackPanel Margin="0,7" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Grid HorizontalAlignment="Left" Height="54" Grid.Row="1" VerticalAlignment="Top" Width="51">
+                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="42" Opacity="0.99"/>
+                                    <TextBlock
+				        VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center">
+        		        <Run FontSize="32" Text="▲"/>
+                                    </TextBlock>
+                                </Grid>
+                                <Grid HorizontalAlignment="Left" Height="54" Grid.Row="1" VerticalAlignment="Top" Width="51">
+                                        <Rectangle Fill="#FFFFC700" HorizontalAlignment="Left" Height="39" Margin="5,8,0,0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="42" Opacity="0.45"/>
+                                    <TextBlock
+				        VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center">
+        		        <Run FontSize="32" Text="▼"/>
+                                    </TextBlock>
+                                </Grid>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+
+                    <TextBlock Margin="12" HorizontalAlignment="Left" Height="45" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" FontSize="32">
+        	            <Run Text="p"/>
+        	            <Run Text="references"/>
+                    </TextBlock>
+                    
+                </StackPanel>
             </phone:PanoramaItem>
 
             <!--Panorama item two-->
@@ -131,7 +209,7 @@
                                     <TextBlock Padding="6,0" TextWrapping="Wrap" Text="The Who" Foreground="White"/>
                                 </Grid>
                             </Border>
-                           
+
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,12,0,0">
                             <Border  Background="#FFFFC700" Height="173" Width="173" Margin="12,0,0,0">
