@@ -18,6 +18,15 @@ namespace SmartJukeBox
             InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (string.IsNullOrEmpty(Settings.UserID) == false)
+            {
+                NavigationService.Navigate(new Uri("/Menu.xaml", UriKind.Relative));
+            }
+        }
+
         private async void OnRegisterTap(object sender, EventArgs e)
         {
             var user = new UserRegister()
