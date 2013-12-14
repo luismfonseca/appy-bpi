@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using SmartJukeBox.Resources;
+using System.Windows;
 
 namespace SmartJukeBox.ViewModels
 {
@@ -30,10 +31,27 @@ namespace SmartJukeBox.ViewModels
                 {
                     spotID = value;
                     NotifyPropertyChanged("SpotID");
+                    NotifyPropertyChanged("SpotPivotItemVisible");
+                    NotifyPropertyChanged("CheckPivotItemVisible");
                 }
             }
         }
 
+        public Visibility SpotPivotItemVisible
+        {
+            get
+            {
+                return string.IsNullOrEmpty(spotID) ? Visibility.Collapsed : Visibility.Visible;
+            }
+        }
+
+        public Visibility CheckPivotItemVisible
+        {
+            get
+            {
+                return string.IsNullOrEmpty(spotID) ? Visibility.Visible : Visibility.Collapsed;
+            }
+        }
 
         private string _sampleProperty = "Sample Runtime Property Value";
         public string SampleProperty
