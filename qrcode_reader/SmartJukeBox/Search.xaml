@@ -67,6 +67,7 @@
                         <phone:LongListSelector.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel
+                                    Orientation="Horizontal"
                                 toolkit:TiltEffect.IsTiltEnabled="True"
                                 Tap="OnResultTap">
                                     <TextBlock

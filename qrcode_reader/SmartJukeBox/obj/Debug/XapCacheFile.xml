@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\SmartJukeBox_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="14/12/2013 04:23:40">
-  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\SmartJukeBox.dll" archivePath="SmartJukeBox.dll" lastWriteTime="14/12/2013 04:23:39" />
+﻿<xapCache source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\SmartJukeBox_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="14/12/2013 05:36:27">
+  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\obj\Debug\SmartJukeBox.dll" archivePath="SmartJukeBox.dll" lastWriteTime="14/12/2013 05:36:26" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="13/12/2013 19:38:52" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Assets\AppBar\check.png" archivePath="Assets\AppBar\check.png" lastWriteTime="01/01/2013 18:57:00" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="13/12/2013 19:38:52" />
@@ -13,11 +13,11 @@
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="13/12/2013 21:21:02" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="13/12/2013 21:21:02" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="13/12/2013 21:21:02" />
-  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="14/12/2013 04:19:58" />
+  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="14/12/2013 05:34:03" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="13/12/2013 19:38:52" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="13/12/2013 19:38:52" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="13/12/2013 21:21:02" />
-  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\NavigationServiceExtensions\Bin\Debug\NavigationServiceExtensions.dll" archivePath="NavigationServiceExtensions.dll" lastWriteTime="14/12/2013 04:19:54" />
+  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\NavigationServiceExtensions\Bin\Debug\NavigationServiceExtensions.dll" archivePath="NavigationServiceExtensions.dll" lastWriteTime="14/12/2013 05:33:59" />
   <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\dll\zxing.wp8.0.dll" archivePath="zxing.wp8.0.dll" lastWriteTime="13/12/2013 23:18:25" />
-  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="14/12/2013 04:19:58" />
+  <file source="C:\Users\shuffle\Documents\APPY\appy-bpi\qrcode_reader\SmartJukeBox\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="14/12/2013 05:34:03" />
 </xapCache>

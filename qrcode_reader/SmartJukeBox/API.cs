@@ -27,7 +27,7 @@ namespace SmartJukeBox
                 case Actions.Register:
                     return new Uri(string.Format(BASE_URL + "User"));
                 case Actions.Search:
-                    return new Uri(string.Format("http://ws.spotify.com/search/1/artist.json?q={0}", parameters));
+                    return new Uri(string.Format("http://ws.audioscrobbler.com/2.0/?method=artist.search&artist={0}&api_key=615e15c4504fd183e1d6d6f3ae40f753&format=json", parameters));
                 default:
                     throw new NotSupportedException("Unkown API.Actions.");
             }

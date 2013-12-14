@@ -102,8 +102,9 @@
       <DependentUpon>HowToUsePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="JsonTypes\Json.cs" />
+    <Compile Include="JsonTypes\SearchSingleResponse.cs" />
     <Compile Include="JsonTypes\UserRegister.cs" />
-    <Compile Include="JsonTypes\SearchResult.cs" />
+    <Compile Include="JsonTypes\SearchResponse.cs" />
     <Compile Include="JsonTypes\UserRegisterResponse.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="DetailsPage.xaml.cs">

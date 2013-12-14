@@ -36,10 +36,31 @@ namespace SmartJukeBox
             progressBar.IsIndeterminate = true;
             progressBar.Visibility = Visibility.Visible;
 
-            var searchResults = await API.GetAsync<SearchResult>(API.Actions.Search, tbSearch.Text);
-            searchResults = searchResults ?? new SearchResult();
+            bool success = false;
+            try
+            {
+                var searchResponse = await API.GetAsync<SearchResponse>(API.Actions.Search, tbSearch.Text);
+                searchResponse = searchResponse ?? new SearchResponse();
 
-            llsResults.ItemsSource = searchResults.artists;
+                llsResults.ItemsSource = searchResponse.results.artistmatches.artist;
+                success = true;
+            }
+            catch
+            {
+            }
+            if (success == false)
+            {
+                try
+                {
+                    var searchResponse = await API.GetAsync<SearchSingleResponse>(API.Actions.Search, tbSearch.Text);
+                    searchResponse = searchResponse ?? new SearchSingleResponse();
+
+                    llsResults.ItemsSource = new Artist[] { searchResponse.results.artistmatches.artist };
+                }catch
+                {
+                    llsResults.ItemsSource = new Artist[0];
+                }
+            }
 
             if (llsResults.ItemsSource.Count == 0)
             {
